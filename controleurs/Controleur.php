@@ -9,9 +9,9 @@ class Controleur
     }
     public function afficherPhoto()
     {
-        $photos = new Photos();
+        $photo = new Photo();
         if (isset($_GET['id']) && is_numeric($_GET['id'])) {
-            $photo = $photos->afficherPhoto($_GET['id']);
+            $photo = $photo->afficherPhoto($_GET['id']);
         }
         require_once('vues/affiche-photo.php');
     }
